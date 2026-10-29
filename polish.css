@@ -114,3 +114,50 @@ body{background:radial-gradient(ellipse 760px 470px at 75% -120px,#2947bc75,tran
 /* Ideas are a single readable list on every screen. */
 .cards.ideas-list{grid-template-columns:minmax(0,1fr);max-width:860px;margin-inline:auto}
 .ideas-list .item-card{padding:18px 20px}
+
+/* V1.6: compact home banner, category-based purchasing, no horizontal mobile table */
+.hero.hero-clean{min-height:170px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:25px 28px}
+.hero-clean-name{display:flex;gap:15px;align-items:center;min-width:0}
+.hero-clean-name .hero-logo{width:64px;height:64px;object-fit:cover;border-radius:16px;box-shadow:0 0 20px #627fff42;flex-shrink:0}
+.hero-clean h2{font-size:clamp(23px,3vw,33px);margin:4px 0 0}
+.hero-clean .eyebrow{font-size:11px}
+.hero-clean .primary-btn{margin:0;white-space:nowrap}
+.planner-method{margin:18px 0 12px;border:1px solid #435a94;border-radius:14px;background:#182550;padding:12px 16px}
+.planner-method summary{cursor:pointer;color:#dce7ff;font-weight:700}
+.planner-method .hint-box{margin-top:13px;font-size:13px}
+.purchase-category-groups{gap:20px}
+.purchase-table-wrap{overflow:hidden;width:100%;border:1px solid #3d518c;border-radius:14px;background:#111b40}
+.purchase-entry-table,.purchase-suggested-table{width:100%;min-width:0;table-layout:fixed;border-collapse:collapse}
+.purchase-entry-table th,.purchase-entry-table td,.purchase-suggested-table th,.purchase-suggested-table td{white-space:normal;padding:13px 10px;vertical-align:middle}
+.purchase-entry-table th:nth-child(1),.purchase-entry-table td:nth-child(1){width:45%}
+.purchase-entry-table th:nth-child(2),.purchase-entry-table td:nth-child(2){width:19%;text-align:center}
+.purchase-entry-table th:nth-child(3),.purchase-entry-table td:nth-child(3){width:19%;text-align:center}
+.purchase-entry-table th:nth-child(4),.purchase-entry-table td:nth-child(4){width:17%;text-align:center}
+.purchase-product-cell b{display:block;font-size:14px;word-break:break-word}
+.purchase-product-cell small{display:block;line-height:1.5;font-size:11px;color:#aebee5;word-wrap:break-word}
+.purchase-product-cell small.purchase-needed{color:#c4d8ff;font-weight:700}
+.purchase-entry-table .inline-field{width:100%;min-width:0;text-align:center;box-sizing:border-box;padding:9px 4px;border-radius:10px;font-size:14px}
+.purchase-entry-table .sm-btn{white-space:nowrap;padding:8px 8px}
+.purchase-entry-table tbody tr:nth-child(even),.purchase-suggested-table tbody tr:nth-child(even){background:#ffffff06}
+.purchase-suggested-table th:first-child,.purchase-suggested-table td:first-child{width:42%}
+.purchase-suggested-table th:nth-child(2),.purchase-suggested-table td:nth-child(2){width:34%}
+.purchase-suggested-table th:nth-child(3),.purchase-suggested-table td:nth-child(3){width:24%}
+.purchase-suggested-table td small{display:block;color:#9cafd8;font-size:11px}
+@media(max-width:700px){
+ .hero.hero-clean{min-height:150px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:20px;gap:13px}
+ .hero-clean-name{gap:11px}
+ .hero-clean-name .hero-logo{height:48px;width:48px;border-radius:13px}
+ .hero-clean .primary-btn{margin-top:0;font-size:13px}
+ .purchase-category-groups{gap:16px}
+ .purchase-entry-table th,.purchase-entry-table td{padding:10px 4px;font-size:11px}
+ .purchase-entry-table th:nth-child(1),.purchase-entry-table td:nth-child(1){width:42%}
+ .purchase-entry-table th:nth-child(2),.purchase-entry-table td:nth-child(2){width:18%}
+ .purchase-entry-table th:nth-child(3),.purchase-entry-table td:nth-child(3){width:20%}
+ .purchase-entry-table th:nth-child(4),.purchase-entry-table td:nth-child(4){width:20%}
+ .purchase-product-cell b{font-size:12px}
+ .purchase-product-cell small{font-size:10px}
+ .purchase-entry-table .inline-field{font-size:13px;padding:8px 2px}
+ .purchase-entry-table .sm-btn{padding:7px 4px;font-size:11px;min-height:33px}
+ .purchase-suggested-table th,.purchase-suggested-table td{font-size:11px;padding:10px 6px}
+ .purchase-suggested-table td b{font-size:12px}
+}
