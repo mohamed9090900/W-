@@ -110,3 +110,7 @@ body{background:radial-gradient(ellipse 760px 470px at 75% -120px,#2947bc75,tran
 
 .top-brand-icon{width:39px;height:39px;border:1px solid #576dbd;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:0 0 16px #425cd133}
 @media(max-width:700px){.top-brand-icon{width:34px;height:34px;border-radius:10px}.top-title{gap:9px}}
+
+/* Ideas are a single readable list on every screen. */
+.cards.ideas-list{grid-template-columns:minmax(0,1fr);max-width:860px;margin-inline:auto}
+.ideas-list .item-card{padding:18px 20px}
