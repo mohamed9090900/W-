@@ -1,4 +1,4 @@
-const CACHE='siwa-manager-v1.2.0';
+const CACHE='siwa-manager-v1.4.0';
 const ASSETS=['./','./index.html','./styles.css','./polish.css','./app.js','./manifest.webmanifest','./assets/icon.svg','./assets/icon-192.png','./assets/icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(names=>Promise.all(names.filter(n=>n.startsWith('siwa-manager-')&&n!==CACHE).map(n=>caches.delete(n)))).then(()=>self.clients.claim())));

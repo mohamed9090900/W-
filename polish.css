@@ -51,3 +51,16 @@ body{background:radial-gradient(ellipse 760px 470px at 75% -120px,#2947bc75,tran
 .price-delta span{font-size:19px;line-height:1}
 .price-delta.rise{color:#ff878b}.price-delta.fall{color:#6bdeb0}
 .price-delta b{font-variant-numeric:tabular-nums;font-size:12px}
+
+/* V1.3 table menu, compact mobile editing */
+.menu-table-wrap{width:100%;overflow-x:auto;border:1px solid #3d518c;border-radius:17px;background:#131e46;box-shadow:0 12px 32px #02092b36;-webkit-overflow-scrolling:touch}
+.menu-table{width:100%;min-width:490px;border-collapse:collapse;table-layout:auto}
+.menu-table th,.menu-table td{white-space:nowrap;padding:12px 13px}
+.menu-table .menu-name{white-space:normal;min-width:118px;line-height:1.7}
+.menu-table .menu-price{font-size:17px;font-weight:800;white-space:nowrap}
+.menu-table th:last-child,.menu-table td:last-child{text-align:center}
+.menu-table .sm-btn{padding:8px 10px;min-height:35px;white-space:nowrap}
+.menu-inline-status{display:block;font-size:10px;color:#a9b8dd}
+.simple-product{grid-template-columns:1fr 1fr}
+.buy-context{font-size:15px;padding:12px;background:#233466;border-radius:12px;color:#e5eaff}
+@media(max-width:700px){.menu-table{min-width:0;table-layout:fixed}.menu-table th,.menu-table td{padding:11px 6px;font-size:12px}.menu-table .menu-name{width:36%}.menu-table th:nth-child(2),.menu-table td:nth-child(2){width:20%}.menu-table th:nth-child(3),.menu-table td:nth-child(3){width:18%}.menu-table th:last-child,.menu-table td:last-child{width:26%}.menu-table .only-wide{display:none}.menu-table .menu-price{font-size:14px}.menu-table .sm-btn{padding:7px 8px;font-size:11px}.menu-table .price-delta{font-size:12px}.menu-table .price-delta span{font-size:16px}.simple-product{grid-template-columns:1fr}}
