@@ -1,5 +1,5 @@
-const CACHE='buffet-manager-v1.6.0';
-const ASSETS=['./','./index.html','./styles.css','./polish.css','./app.js','./manifest.webmanifest','./icon.svg','./icon-192-v16.png','./icon-512-v16.png'];
+const CACHE='buffet-manager-v2.0.0';
+const ASSETS=['./','./index.html','./styles.css','./polish.css','./simple.css','./app.js','./manifest.webmanifest','./icon-192-v20.png','./icon-512-v20.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(names=>Promise.all(names.filter(n=>(n.startsWith('siwa-manager-')||n.startsWith('buffet-manager-'))&&n!==CACHE).map(n=>caches.delete(n)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const req=e.request;if(req.method!=='GET'||new URL(req.url).origin!==self.location.origin)return;
